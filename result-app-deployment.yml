@@ -8,7 +8,7 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      name: result-app-deployment
+      name: result-app-pod
       app: demo-voting-app
   template:
     metadata:
@@ -19,7 +19,7 @@ spec:
 
     spec:
       containers:
-        - name: result-app
+        - name: result-app-pod
           image: dockersamples/examplevotingapp_result
           ports:
             - containerPort: 80
